@@ -50,7 +50,7 @@ export default function App() {
     <div className="min-h-screen">
       <header className="sticky top-0 z-10 bg-white/80 backdrop-blur border-b">
         <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-          <h1 className="text-xl font-bold">💸 Expense Tracker</h1>
+          <h1 className="text-xl font-bold"> My Expense Tracker</h1>
           <div className="flex gap-2">
             <button onClick={reloadFromStorage} className="btn-ghost">Reload</button>
             <button onClick={() => setExpenses([])} className="text-sm text-red-600 hover:underline">Clear All</button>
@@ -74,16 +74,6 @@ export default function App() {
           <ExpenseList items={filtered} onEdit={setEditing} onDelete={deleteExpense} />
         </section>
 
-        <aside className="md:col-span-1">
-          <div className="bg-white rounded-xl shadow-sm border p-4">
-            <h3 className="font-semibold mb-3">Tips</h3>
-            <ul className="text-sm space-y-2 list-disc pl-5">
-              <li>Add short notes like “Fuel – Spintex → Airport”.</li>
-              <li>Use search to filter quickly.</li>
-              <li>Data is stored locally in your browser.</li>
-            </ul>
-          </div>
-        </aside>
       </main>
     </div>
   );
